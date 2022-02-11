@@ -1,10 +1,14 @@
 import SearchBar from "./components/SearchBar";
+import Map from "./components/Map";
 
 function App() {
   return (
     <main>
-      <h1>IP Address Tracker</h1>
-      <SearchBar />
+      <header>
+        <h1>IP Address Tracker</h1>
+        <SearchBar />
+      </header>
+      <Map />
     </main>
   );
 }
