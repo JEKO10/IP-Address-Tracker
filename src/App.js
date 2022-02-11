@@ -1,5 +1,12 @@
+import SearchBar from "./components/SearchBar";
+
 function App() {
-  return <div>JEKO</div>;
+  return (
+    <main>
+      <h1>IP Address Tracker</h1>
+      <SearchBar />
+    </main>
+  );
 }
 
 export default App;
