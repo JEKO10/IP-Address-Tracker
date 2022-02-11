@@ -3,14 +3,16 @@ import { useState, useContext, createContext, useEffect } from "react";
 const AppContext = createContext();
 
 function AppProvider({ children }) {
-  const [adress, setAdress] = useState([]);
+  const [address, setAddress] = useState([]);
+  const [query, setQuery] = useState("");
 
   const fetchData = async () => {
     const resp = await fetch(
-      "https://geo.ipify.org/api/v2/country?apiKey=at_moiOBACOKKyPhePH3BfUSWTGsnB3F"
+      `https://geo.ipify.org/api/v2/country?apiKey=at_moiOBACOKKyPhePH3BfUSWTGsnB3F&ipAddress=${query}`
     );
     const data = await resp.json();
-    setAdress(data);
+    setAddress(data);
+    console.log(address);
   };
 
   useEffect(() => {
@@ -20,8 +22,10 @@ function AppProvider({ children }) {
   return (
     <AppContext.Provider
       value={{
-        adress,
-        setAdress,
+        address,
+        query,
+        setQuery,
+        fetchData,
       }}
     >
       {children}
