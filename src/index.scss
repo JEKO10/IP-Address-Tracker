@@ -15,16 +15,17 @@ body {
 
   header {
     background: url("./images/background.jpg") center/cover no-repeat;
-    min-height: 265px;
+    min-height: 215px;
 
     h1 {
       font-weight: 500;
-      padding: 50px 0 30px 0;
+      padding: 20px 0 30px 0;
     }
 
     .search {
       display: flex;
       justify-content: center;
+      align-items: center;
 
       input {
         height: 65px;
@@ -51,6 +52,20 @@ body {
         cursor: pointer;
       }
     }
+  }
+
+  .info {
+    color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    height: 120px;
+    width: 70%;
+    margin: 2rem auto -2.5rem auto;
+    background-color: #fff;
+    position: relative;
+    z-index: 1000;
   }
 
   .map {
