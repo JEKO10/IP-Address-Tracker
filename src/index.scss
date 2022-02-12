@@ -58,7 +58,7 @@ body {
     color: #000;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: baseline;
     border-radius: 15px;
     height: 120px;
     width: 70%;
@@ -66,6 +66,12 @@ body {
     background-color: #fff;
     position: relative;
     z-index: 1000;
+
+    h5 {
+      padding: 25px 0 10px 0;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
   }
 
   .map {

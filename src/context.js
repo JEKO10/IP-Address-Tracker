@@ -12,7 +12,7 @@ function AppProvider({ children }) {
     );
     const data = await resp.json();
     setAddress(data);
-    console.log(data);
+    console.log(address);
   };
 
   useEffect(() => {
