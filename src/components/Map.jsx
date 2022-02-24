@@ -1,18 +1,42 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { useGlobalContext } from "../context";
 
 function Map() {
+  const { address } = useGlobalContext();
+
+  // center={[
+  //       data[index].coordinates.langitude,
+  //       data[index].coordinates.latitude,
+  //     ]}
+
+  //    center={[
+  //       data[index].coordinates.langitude,
+  //       data[index].coordinates.latitude,
+  //    ]}
+
   return (
-    <section className="map">
-      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={[51.505, -0.09]}>
-          <Popup></Popup>
-        </Marker>
-      </MapContainer>
-    </section>
+    <>
+      {address.location !== undefined ? (
+        <section className="map">
+          <MapContainer
+            key={JSON.stringify([address.location.lat, address.location.lng])}
+            center={[address.location.lat, address.location.lng]}
+            zoom={13}
+            scrollWheelZoom={true}
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={[address.location.lat, address.location.lng]}>
+              <Popup></Popup>
+            </Marker>
+          </MapContainer>
+        </section>
+      ) : (
+        ""
+      )}
+    </>
   );
 }
 
