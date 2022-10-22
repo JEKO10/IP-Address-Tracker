@@ -73,6 +73,12 @@ body {
       text-transform: uppercase;
       opacity: 0.5;
     }
+
+    #error {
+      font-weight: 400;
+      text-align: center;
+      padding-top: 10px;
+    }
   }
 
   .map {

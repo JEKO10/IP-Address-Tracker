@@ -11,6 +11,7 @@ function AppProvider({ children }) {
       `https://geo.ipify.org/api/v1?apiKey=at_moiOBACOKKyPhePH3BfUSWTGsnB3F&ipAddress=${query}`
     );
     const data = await resp.json();
+    console.log(data);
     setAddress(data);
     console.log(address);
   };
