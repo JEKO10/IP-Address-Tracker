@@ -6,7 +6,15 @@ This project is focused on tracking IP addresses and displaying its location on 
 
 ## Used Technologies
 
-### React ### React Leaflet ### IP Geolocation API ### Sass ### GitHub Pages
+### React
+
+### React Leaflet
+
+### IP Geolocation API
+
+### Sass
+
+### GitHub Pages
 
 ## Demo
 
