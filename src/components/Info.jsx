@@ -8,7 +8,7 @@ function Info() {
     <>
       <section className="info">
         <div>
-          <h5>IP Adress</h5>
+          <h5>IP Address</h5>
           <h2>{address.ip}</h2>
         </div>
         <div>
