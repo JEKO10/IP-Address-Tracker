@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import { useGlobalContext } from "../context";
 
 function Map() {
@@ -28,9 +28,9 @@ function Map() {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[address.location.lat, address.location.lng]}>
-              <Popup></Popup>
-            </Marker>
+            <Marker
+              position={[address.location.lat, address.location.lng]}
+            ></Marker>
           </MapContainer>
         </section>
       ) : (

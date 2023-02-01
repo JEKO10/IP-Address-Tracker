@@ -11,6 +11,7 @@ function AppProvider({ children }) {
       `https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_API_KEY}&ipAddress=${query}`
     );
     const data = await resp.json();
+    console.log(data);
     setAddress(data);
   };
 
