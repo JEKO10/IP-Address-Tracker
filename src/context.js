@@ -8,11 +8,10 @@ function AppProvider({ children }) {
 
   const fetchData = async () => {
     const resp = await fetch(
-      `https://geo.ipify.org/api/v1?apiKey=at_moiOBACOKKyPhePH3BfUSWTGsnB3F&ipAddress=${query}`
+      `https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_API_KEY}&ipAddress=${query}`
     );
     const data = await resp.json();
     setAddress(data);
-    console.log(address);
   };
 
   useEffect(() => {
