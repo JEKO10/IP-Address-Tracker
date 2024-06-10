@@ -9,6 +9,7 @@
 - [Project task](#project-task)
 - [Project overview](#project-overview)
 - [Built with](#built-with)
+- [Lighthouse Score](#lighthouse-score)
 - [Live preview](#live-preview)
 
 ## Project task
@@ -27,6 +28,19 @@ This react app wants to know your location. If you allow it, we will find your l
 - React Leaflet
 - IP Geolocation API
 - GitHub Pages
+
+## Lighthouse Score
+
+![Lighthouse Score](https://github.com/JEKO10/IP-Address-Tracker/assets/84730554/3facfe8c-672f-48a8-8b21-50588636d257)
+
+- **Performance**: 100
+- **Accessibility**: 86
+- **Best Practices**: 100
+- **SEO**: 100
+
+*Last updated: 6/10/2024*
+
+I continuously strive to maintain and improve these scores with each update.
 
 ## Live preview
 
